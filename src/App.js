@@ -9,9 +9,12 @@ function App() {
   const [scrapedData, setScrapedData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
+  const extension_api = process.env.REACT_APP_EXTENSION_API;
 
+
+  console.log("extension_api",extension_api);
   useEffect(() => {
-    fetch('http://localhost:5000/showAll')
+    fetch(`http://${extension_api}/showAll`)
       .then(response => response.json())
       .then(data => setScrapedData(data))
       .catch(error => console.error('Error:', error));
