@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the container takes the full height */
+  overflow: auto; /* Add scrollbars if content overflows */
+}
