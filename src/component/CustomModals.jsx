@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Button, Modal, Typography } from 'antd';
 import ReactHtmlParser from 'react-html-parser';
+const {Title} = Typography;
 
 const CustomModals = ({ visible, onCancel, item }) => {
 
@@ -23,7 +24,7 @@ const CustomModals = ({ visible, onCancel, item }) => {
             style={{
               width: '100%', 
               objectFit: 'cover' }}/>
-          <p>{item.prices}</p>
+          <Title level={2}>{item.prices}</Title>
           {ReactHtmlParser(item.descriptions)}
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
           <Button 
