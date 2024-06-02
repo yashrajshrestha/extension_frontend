@@ -105,10 +105,10 @@ function App() {
           {filteredData
             .slice((currentPage - 1) * pageSize, currentPage * pageSize)
             .map((item, index) => (
-              <Col key={index} span={8}>
+              <Col key={index}>
                 <Card
                   hoverable
-                  style={{ height: '100%' }}
+                  style={{ height: '100%', maxWidth: '350px'}}
                   cover={
                     <img
                       alt="example"
