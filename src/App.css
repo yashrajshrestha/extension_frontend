@@ -1,6 +1,19 @@
-.App {
-  text-align: center;
+body {
+  margin: 0; /* Remove default body margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue; /* Set background color for the entire viewport */
 }
+
+.App {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure the .App component fills the width of the body */
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -37,10 +50,15 @@
   }
 }
 
-.card-container {
+.content-container {
+  margin: 0 auto; /* This centers the content horizontally */
+  max-width: 1200px; /* You can adjust the maximum width as needed */
+}
+
+.search-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the container takes the full height */
-  overflow: auto; /* Add scrollbars if content overflows */
+  gap: 10px;
+  margin-bottom: 20px;
 }
