@@ -17,7 +17,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
-  const pageSize = 9; // 3x3 grid, so 9 items per page
+  const [pageSize, setPageSize] = useState(9);
   const extension_api = process.env.REACT_APP_EXTENSION_API;
 
   useEffect(() => {
@@ -47,8 +47,9 @@ function App() {
     window.open(url, '_blank');
   };
 
-  const handleChangePage = (page) => {
+  const handleChangePage = (page, pageSize) => {
     setCurrentPage(page);
+    setPageSize(pageSize);
   };
 
   const handleSearch = (value) => {
